@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f1cb70;
+}
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+figure.luffy{
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 20px black;
+}
+
+figure.luffy img{
+    width: 100%;
+    height: 100%;
+}
+
+/*.color1 {color: #f1cb70;}
+.color2 {color: #dddd9a;}
+.color3 {color: #120962;}
+.color4 {color: #154d99;}
+.color5 {color: #abb3e1;}*/
