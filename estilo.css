@@ -1,23 +1,160 @@
 @charset "UTF-8";
+@font-face {
+    src: url("../_font/onepiecefont.ttf");
+    font-family: 'onepiece';
+}
 
-body {
-    background-color: #f1cb70;
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
 }
-p{
-    text-align: justify;
-    text-indent: 50px;
+/*Botao*/
+body#botao {
+    min-height: 100vh;
+    background-color: #202631;
+    color: #14fff1;
+    font-family: "Itim", coursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-figure.luffy{
+.bot{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 32px;
+    color: #14fff1;
+    border: 8px solid #14fff1;
+    padding: 16px 64px;
+    border-radius: 16px;
+
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #14fff1;
+
+    box-shadow: inset 0 0 32px #14fff1, 0 0 32px #14fff1;
+
     position: relative;
-    border: 8px solid white;
-    box-shadow: 1px 1px 20px black;
+
+    top: -450px;
+    left: 1300px;
 }
 
-figure.luffy img{
+.bot::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
+    background-color: #14fff1;
+    left: 0;
+    top: 120%;
+    transition: perspective(64px) rotateX(40deg) scale(1, 0.35);
+    filter: blur(64px);
+    opacity: 0.7;
 }
 
+.bot::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #14fff1;
+    box-shadow: 0 0 128px 32px #14fff1;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.bot:hover::after,
+.bot:focus::after{
+    opacity: 1;
+}
+
+.bot:hover::before,
+.bot:focus::before{
+    opacity: 1;
+}
+
+.bot:hover,
+.bot:focus{
+    color: #202631;
+    text-shadow: none;
+}
+
+/*Fundo*/
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw; /*D6E4E5*/
+    background: linear-gradient(70deg, #EFF5F5, #282A3A, #497174, #EB6440);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+@keyframes colors {
+    0%{
+    background-position: 0% 50%;
+}
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+/*Borda*/
+header#cabecalho{
+    border-bottom: 1px #606060 solid;
+    height: 100px;
+}
+/*Titulos*/
+header#cabecalho h1{
+    font-family: 'onepiece';
+    font-size: 30pt;
+}
+/*SubTitulo*/
+header#cabecalho h2{
+    font-family: 'onepiece';
+}
+/*Imagem canto*/
+figure.luffy img{
+    max-width: 500px;
+    max-height: 450px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 1500px;
+    top: 300px;
+}
+/*Texto/*/
+section#corpo{
+    display: block;
+    width: 520px;
+}
+/*Paragrafo*/
+p{
+    text-align: justify;
+    text-indent: 25px;
+}
+
+nav#menu{
+    display: block;
+}
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    left: 1500px;
+}
+
+nav#menu li{
+    display: inline-block;
+    background-color: transparent;
+}
 /*.color1 {color: #f1cb70;}
 .color2 {color: #dddd9a;}
 .color3 {color: #120962;}
