@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'TT Rounds Neue Condensed';
-    src: local('TT Rounds Neue Condensed Regular'), local('TT-Rounds-Neue-Condensed-Regular'),
-        url('TTRoundsNeue-CondRegular.woff2') format('woff2'),
-        url('TTRoundsNeue-CondRegular.woff') format('woff'),
-        url('TTRoundsNeue-CondRegular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
